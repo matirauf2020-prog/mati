@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Commercial Solar Projects | Muhammad Muti-ur-Rauf PV Designer</title>
+  <meta name="description" content="20 professional Commercial Solar PV design projects — hotels, hospitals, offices, carports. PVsyst simulation and SketchUp layouts."/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231E40AF'/></svg>"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <link rel="stylesheet" href="assets/css/components.css"/>
+  <link rel="stylesheet" href="assets/css/animations.css"/>
+</head>
+<body>
+<div id="loading-screen"><div class="loader-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div class="loader-bar"><div class="loader-bar-fill"></div></div><span class="loader-text">Loading...</span></div>
+<nav class="navbar"><div class="container navbar-inner"><a href="index.html" class="navbar-brand"><div class="navbar-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div><div class="navbar-brand-text"><span class="navbar-brand-name">Muhammad Muti-ur-Rauf</span><span class="navbar-brand-title">PV Designer</span></div></a><ul class="navbar-nav"><li><a href="index.html" class="nav-link">Home</a></li><li><a href="about.html" class="nav-link">About</a></li><li class="nav-item-dropdown"><a href="projects.html" class="nav-link active">Projects ▾</a><div class="nav-dropdown"><a href="projects.html" class="nav-dropdown-link">All Projects</a><a href="industrial.html" class="nav-dropdown-link">Industrial</a><a href="commercial.html" class="nav-dropdown-link">Commercial</a><a href="residential.html" class="nav-dropdown-link">Residential</a></div></li><li><a href="order.html" class="nav-link">Order Design</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul><div class="navbar-actions"><a href="order.html" class="btn btn-primary btn-sm btn-ripple">Order a Design</a></div><button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
+<div class="mobile-menu" id="mobile-menu"><a href="index.html" class="mobile-nav-link">🏠 Home</a><a href="about.html" class="mobile-nav-link">👤 About Me</a><a href="projects.html" class="mobile-nav-link">📁 All Projects</a><a href="industrial.html" class="mobile-nav-link">🏭 Industrial</a><a href="commercial.html" class="mobile-nav-link active">🏢 Commercial</a><a href="residential.html" class="mobile-nav-link">🏠 Residential</a><a href="order.html" class="mobile-nav-link">📋 Order Design</a><a href="contact.html" class="mobile-nav-link">📞 Contact</a></div>
+
+<section class="page-hero" style="background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 40%, #E0F2FE 100%);">
+  <div class="container page-hero-content">
+    <div class="breadcrumbs"><a href="index.html">Home</a><span class="separator">›</span><a href="projects.html">Projects</a><span class="separator">›</span><span>Commercial</span></div>
+    <span class="badge badge-commercial" style="margin-bottom:0.75rem;font-size:0.8rem">🏢 20 Projects</span>
+    <h1 class="section-title" style="text-align:left;margin-bottom:0.75rem">Commercial Solar PV Projects</h1>
+    <p style="color:var(--color-text-secondary);font-size:1.05rem;max-width:600px">Hotels, hospitals, offices, carports, and multi-building commercial solar designs ranging from 20kW to 250kW with full PVsyst and SketchUp documentation.</p>
+    <div style="display:flex;gap:0.75rem;margin-top:1.25rem;flex-wrap:wrap">
+      <a href="https://www.youtube.com/playlist?list=PLAnIFsPchnbH9MMzoc1-43yG6HmwshBoP" target="_blank" rel="noopener" class="btn btn-outline btn-sm">▶ Watch Full Commercial Playlist</a>
+      <a href="order.html" class="btn btn-primary btn-sm">Order Commercial Design</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="filter-bar">
+      <div class="filter-tabs"><button class="filter-tab active" data-filter="commercial">🏢 All Commercial (20)</button></div>
+      <div class="search-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="search" id="projects-search" class="search-input" placeholder="Search commercial projects…" aria-label="Search"/></div>
+      <select id="projects-sort" class="sort-select" aria-label="Sort"><option value="default">Sort: Default</option><option value="title-asc">Title A–Z</option><option value="featured">Featured First</option></select>
+      <span class="result-count" id="result-count">20 projects</span>
+    </div>
+    <div class="projects-grid" id="projects-grid"></div>
+  </div>
+</section>
+
+<div class="modal-overlay" id="video-modal" role="dialog" aria-modal="true"><div class="modal"><div class="modal-header"><div><span id="modal-category" class="badge badge-commercial">Commercial</span><h2 class="modal-title" id="modal-project-title"></h2></div><button class="modal-close" onclick="closeVideoModal()" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div><div style="aspect-ratio:16/9;background:#000"><iframe id="modal-video-frame" width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay; encrypted-media" title="Project Video" style="display:block"></iframe></div><div class="modal-body"><p id="modal-description" style="font-size:0.9rem;color:var(--color-text-secondary);line-height:1.7;"></p></div><div class="modal-footer"><a id="modal-yt-link" href="#" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Watch on YouTube</a><a id="modal-drawing-link" href="#" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" style="display:none">View Drawing</a><a href="order.html" class="btn btn-solar btn-sm">Order Similar Design</a></div></div></div>
+
+<footer class="footer"><div style="padding:2rem 0;border-top:1px solid rgba(255,255,255,0.08)"><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:0.875rem;color:rgba(255,255,255,0.4)"><span>© 2024 Muhammad Muti-ur-Rauf.</span><div style="display:flex;gap:1.5rem"><a href="industrial.html" style="color:rgba(255,255,255,0.5)">Industrial</a><a href="residential.html" style="color:rgba(255,255,255,0.5)">Residential</a><a href="order.html" style="color:rgba(255,255,255,0.5)">Order Design</a></div></div></div></footer>
+<a href="https://wa.me/923494348139" target="_blank" rel="noopener" id="whatsapp-float" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" style="width:28px;height:28px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a9 9 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<button id="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg></button>
+<script src="assets/js/projects.js"></script><script src="assets/js/filter.js"></script><script src="assets/js/main.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{ FilterLib.init('commercial'); });</script>
+</body></html>
