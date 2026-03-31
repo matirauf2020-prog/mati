@@ -1,0 +1,206 @@
+/* =============================================
+   ANIMATIONS.CSS — Keyframes & Transitions
+   Muhammad Muti-ur-Rauf | PV Designer Portfolio
+   ============================================= */
+
+/* ---- Keyframes ---- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulseScale {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.08); }
+}
+
+@keyframes loadBar {
+  0%   { width: 0%; }
+  60%  { width: 100%; }
+  100% { width: 100%; opacity: 0; }
+}
+
+@keyframes shimmer {
+  from { background-position: -400px 0; }
+  to   { background-position: 400px 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes bounceIn {
+  0%   { opacity: 0; transform: scale(0.3); }
+  50%  { opacity: 1; transform: scale(1.08); }
+  70%  { transform: scale(0.94); }
+  100% { transform: scale(1); }
+}
+
+@keyframes ripple {
+  to { transform: scale(2.5); opacity: 0; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes countUp {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes rotateSun {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ---- Scroll-triggered reveal classes ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delay helpers */
+.delay-1 { transition-delay: 0.1s !important; }
+.delay-2 { transition-delay: 0.2s !important; }
+.delay-3 { transition-delay: 0.3s !important; }
+.delay-4 { transition-delay: 0.4s !important; }
+.delay-5 { transition-delay: 0.5s !important; }
+.delay-6 { transition-delay: 0.6s !important; }
+.delay-7 { transition-delay: 0.7s !important; }
+.delay-8 { transition-delay: 0.8s !important; }
+
+/* ---- Hero text animations ---- */
+.hero-anim-1 { animation: fadeInUp 0.7s ease backwards 0.2s; }
+.hero-anim-2 { animation: fadeInUp 0.7s ease backwards 0.4s; }
+.hero-anim-3 { animation: fadeInUp 0.7s ease backwards 0.6s; }
+.hero-anim-4 { animation: fadeInUp 0.7s ease backwards 0.8s; }
+.hero-anim-5 { animation: fadeInUp 0.7s ease backwards 1.0s; }
+
+.hero-visual-anim { animation: fadeInRight 0.8s ease backwards 0.5s; }
+
+/* ---- Skeleton loading ---- */
+.skeleton {
+  background: linear-gradient(90deg,
+    var(--color-surface-2) 25%,
+    var(--color-border) 50%,
+    var(--color-surface-2) 75%
+  );
+  background-size: 400px 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: var(--radius-md);
+}
+
+.skeleton-card {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+}
+
+/* ---- Button ripple ---- */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  animation: ripple 0.55s linear;
+  pointer-events: none;
+}
+
+/* ---- Floating badge ---- */
+.floating-badge {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ---- Sun icon spin (decorative) ---- */
+.sun-spin {
+  animation: rotateSun 12s linear infinite;
+}
+
+/* ---- Page transition ---- */
+.page-enter {
+  animation: fadeIn 0.4s ease both;
+}
+
+/* ---- Card hover glow ---- */
+.card-glow:hover {
+  box-shadow: var(--shadow-blue), var(--shadow-xl);
+}
+
+/* ---- No results animation ---- */
+.no-results {
+  animation: scaleIn 0.4s ease both;
+}
